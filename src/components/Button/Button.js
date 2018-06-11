@@ -1,7 +1,7 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
 
-// const Button = props => {
-//   return <button onClick={props.clicked}>{props.children}</button>;
-// };
+const Button = props => {
+  return <button onClick={props.clickButton}>{props.children}</button>;
+};
 
-// export default Button;
+export default Button;
