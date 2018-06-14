@@ -5,7 +5,7 @@ let newid = 0;
 
 axios.get("https://api.imgflip.com/get_memes").then(response => {
   const a = response.data.data;
-  // console.log(response.data.data);
+  console.log(response.data.data);
   const memeIds = a.memes.map(item => {
     item.newid = newid;
     newid++;

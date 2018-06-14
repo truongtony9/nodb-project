@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-
 import "./Meme.css";
 // import Name from "./Name";
+import Input from "../Input/Input";
 import Button from "../Button/Button";
 // import { log } from "util";
 
@@ -56,6 +56,7 @@ class Memes extends Component {
   };
 
   onChangeHandler = e => {
+    console.log(e);
     this.setState({ input: e });
   };
 
@@ -91,11 +92,7 @@ class Memes extends Component {
           <div className="name">{this.state.name}</div>
           <div className="msg">{this.state.msg}</div>
           <br />
-          <input
-            onChange={event => this.onChangeHandler(event.target.value)}
-            type="text"
-            placeholder="edit top text here..."
-          />
+          <Input inputFunction={this.onChangeHandler} />
           <Button className="updateText" clickButton={this.updateHandler}>
             Edit Text
           </Button>
